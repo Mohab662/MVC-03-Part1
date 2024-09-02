@@ -1,0 +1,49 @@
+﻿
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+    @* Start Hedder *@
+    <nav class="navbar navbar-dark bg-dark d-flex justify-content-center">
+
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary mx-4">Home</a>
+        <a asp-controller="Home" asp-action="AboutUs" class="btn btn-warning mx-4">About Us</a>
+        <a asp-controller="Home" asp-action="Privcy" class="btn btn-success mx-4">Privcy</a>
+        <a asp-controller="Home" asp-action="ContactUs" class="btn btn-info mx-4">Contact Us</a>
+        <a asp-controller="Account" asp-action="Login" class="btn btn-secondary mx-4">Login</a>
+        <a asp-controller="Account" asp-action="Register" class="btn btn-light mx-4">Register</a>
+
+        <!-- HTML Tag -->
+        @* <a href="/Account/Register" class="btn btn-light mx-4">Register</a> *@
+
+        <!-- HTMl Helpers -->
+        @* @Html.ActionLink("Register", "Account", "Register", null, new {@class="btn btn-light mx-4"}); *@
+
+        <!-- Tag Helpers -->
+        @* <a asp-controller="Account" asp-action="Register" class="btn btn-light mx-4">Register</a> *@
+
+    </nav>
+    @* End Hedder *@
+
+    <div>
+        @RenderBody()
+    </div>
+
+    @* Start Footer *@
+    <footer class="fixed-bottom">
+        <center>
+            <div class="py-4 bg-primary text-white rounded-2">
+                <p>CopyRight &copy; Mohab @DateTime.Now </p>
+            </div>
+        </center>
+
+    </footer>
+    @* End Footer *@
+</body>
+</html>
